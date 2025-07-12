@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Nest AC Smart Thermostat - Gen 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            background: url('https://source.unsplash.com/1920x1080/?weather') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            position: relative;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .dial {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 3;
+        }
+        .ice-effect {
+            display: none;
+            margin-top: 20px;
+            color: #00d4ff;
+            font-size: 20px;
+            animation: freezeEffect 2s infinite;
+            z-index: 4;
+        }
+        @keyframes freezeEffect {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+        .wind-flow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.0));
+            opacity: 0;
+            animation: windAnimation 3s linear infinite; /* Increased duration for smoother flow */
+            z-index: 1;
+        }
+        @keyframes windAnimation {
+            0% { transform: translateX(-100%); opacity: 0.5; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+        .temperature {
+            font-size: 50px;
+            margin-top: 20px;
+            display: none;
+            z-index: 5;
+        }
+        .ac-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+            z-index: 5;
+        }
+        .weather-info {
+            font-size: 24px;
+            z-index: 5;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        let currentAngle = 0;
+        let isACOn = false;
+        let temperature = 22; // Starting temperature
+
+        function rotateDial() {
+            const dial = document.getElementById('dial');
+            currentAngle += 30;
+            dial.style.transform = `rotate(${currentAngle}deg)`;
+
+            // Simulate freezing AC wind
+            const iceEffect = document.getElementById('ice-effect');
+            const windFlow = document.getElementById('wind-flow');
+            const temperatureDisplay = document.getElementById('temperature');
+            const acButton = document.getElementById('ac-button');
+
+            if (currentAngle >= 90) { // Threshold for freezing effect
+                iceEffect.style.display = 'block';
+                windFlow.style.animationPlayState = 'running'; // Start wind effect
+                temperatureDisplay.style.display = 'block';
+                temperatureDisplay.textContent = `Temperature: ${temperature}°C`; // Update temperature
+                acButton.style.display = 'inline-block'; // Show AC On button
+                isACOn = true; // Set AC state
+            } else {
+                iceEffect.style.display = 'none';
+                windFlow.style.animationPlayState = 'paused'; // Stop wind effect
+                temperatureDisplay.style.display = 'none';
+                acButton.style.display = 'none'; // Hide AC On button
+                isACOn = false; // Reset AC state
+            }
+
+            // Decrease temperature when AC is on
+            if (isACOn && temperature > 16) {
+                temperature--; // Decrease temperature by 1 degree
+                temperatureDisplay.textContent = `Temperature: ${temperature}°C`; // Update temperature display
+            }
+        }
+
+        function turnOnAC() {
+            if (!isACOn) {
+                isACOn = true; // Set AC state
+                alert('AC is now ON!');
+            }
+        }
+
+        // Fetch weather data from OpenWeatherMap API
+        async function fetchWeather() {
+            const apiKey = '32753be13f0bd11eba723e1ef98bd0c9'; // Replace with your OpenWeatherMap API key
+            const city = 'Abu-Dhabi'; // Replace with your city name
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+            const data = await response.json();
+            if (data.main) {
+                const temperature = data.main.temp;
+                const weatherDescription = data.weather[0].description;
+                document.getElementById('weather-info').textContent = `Current Weather: ${temperature}°C, ${weatherDescription}`;
+            } else {
+                document.getElementById('weather-info').textContent = 'Weather data not available.';
+            }
+        }
+
+        window.onload = function() {
+            fetchWeather();
+        };
+    </script>
+</head>
+<body>
+
+    <h1>Google Nest Thermostat - Gen 4</h1>
+    <div class="container">
+        <!-- Nest Thermostat Image -->
+        <img src="image/nest-thermostat-gen4.jpg" alt="Nest Thermostat Gen 4" id="nest-thermostat">
+
+        <!-- Invisible dial area for interaction -->
+        <div class="dial" id="dial" onclick="rotateDial()"></div>
+        
+        <!-- Wind flowing effect -->
+        <div id="wind-flow" class="wind-flow"></div>
+    </div>
+
+    <!-- Ice effect text -->
+    <div id="ice-effect" class="ice-effect">
+        ❄️ AC wind freezing with ice! ❄️
+    </div>
+    
+    <!-- Temperature display -->
+    <div id="temperature" class="temperature">Temperature: 22°C</div>
+
+    <!-- AC On Button -->
+    <a href="#" id="ac-button" class="ac-button" onclick="turnOnAC()">Turn On AC</a>
+
+    <!-- Weather Information -->
+    <div id="weather-info" class="weather-info">Loading weather data...</div>
+
+    <!-- Button to go back to the home page -->
+    <a class="button" href="index.html" style="margin-top: 50px; display: inline-block; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Back to Home</a>
+
+</body>
+</html>

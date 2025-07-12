@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Automation System - Easy Gate Maintenance LLC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            overflow-y: hidden; /* Allows vertical scroll */
+            height: 100vh;
+        }
+        header, section, footer {
+            display: none;
+        }
+        header {
+            background: rgba(0, 123, 255, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            color: black;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .arrow {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 50px; /* Adjust margin */
+            display: block;
+            color: white;
+        }
+        .arrow-text {
+            text-align: center;
+            color: white;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        .light-control {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+        }
+        #light-status {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleLight(action) {
+            const lightStatus = document.getElementById('light-status');
+            const pageContent = document.querySelectorAll('header, section, footer');
+            
+            if (action === 'on') {
+                document.body.style.backgroundColor = 'white';
+                lightStatus.textContent = 'The light is ON';
+                lightStatus.style.display = 'block';
+                pageContent.forEach(elem => elem.style.display = 'block');
+                document.body.style.color = 'black';
+                document.body.style.overflowY = 'auto'; // Enable scrolling when content is displayed
+            } else if (action === 'off') {
+                document.body.style.backgroundColor = 'black';
+                lightStatus.textContent = 'The light is OFF';
+                pageContent.forEach(elem => elem.style.display = 'none');
+                lightStatus.style.display = 'none';
+                document.body.style.color = 'white';
+                document.body.style.overflowY = 'hidden'; // Disable scrolling when light is off
+            }
+        }
+        window.onload = function() {
+            document.getElementById('light-status').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<!-- Hidden content until the light is turned on -->
+<header>
+    <img src="image/logo.jpeg" alt="Easy Gate Maintenance LLC Logo" class="logo">
+    <h1>Smart Home Automation System</h1>
+    <p>Easy Gate Maintenance LLC</p>
+</header>
+
+<!-- Initial arrow pointing to the button -->
+<div class="arrow">&#x2193;</div>
+<div class="arrow-text">Turn on the light to see our services, and before you leave, turn off the light to save energy.</div>
+
+<!-- Light control section under the arrow -->
+<div class="light-control">
+    <button class="button" onclick="toggleLight('on')">Turn On Light</button>
+    <button class="button" onclick="toggleLight('off')">Turn Off Light</button>
+</div>
+
+<p id="light-status">The light is OFF</p>
+
+<section>
+    <h2>Our Services</h2>
+    <p>Click on any service to learn more:</p>
+    <a class="button" href="GOOGLE NEST AC SMART THERMOSTATE.html">Google Nest AC Thermostate</a>
+    <a class="button" href="wifi.html">Light Control By Phone and Smart Screen</a>
+    <a class="button" href="cctv.html">CCTV Monitring</a>
+    <a class="button" href="swing-gate.html">Door Open & Close</a>
+    <a class="button" href="sound-system.html">Sound System Control</a>
+    
+</section>
+
+<section>
+    <h2>for more details about home automation feel free to contact us!</h2>
+    
+    <a href="https://wa.me/971564636930" class="button">Contact Sales Manager</a>
+    <a href="https://wa.me/971558204507" class="button">Contact Support Team</a>
+</section>
+
+<!-- Button to go back to the main page -->
+<a href="index.html" class="button">Back to Home</a>
+
+<footer>
+    <p>&copy; 2024 Easy Gate Maintenance LLC</p>
+</footer>
+
+</body>
+</html>
