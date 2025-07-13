@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://easygate.netlify.app/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/sliding-gate.html</loc>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/swing-gate.html</loc>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/cctv.html</loc>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/sound-system.html</loc>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/wifi.html</loc>
+  </url>
+  <url>
+    <loc>https://easygate.netlify.app/smart-home-automation-system.html</loc>
+  </url>
+
+</urlset>
