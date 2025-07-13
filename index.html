@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +15,7 @@
     <title>Easy Gate Maintenance LLC - Home Automation & Security Solutions</title>
 
     <!-- Link to Google Fonts for Merriweather -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />
 
     <style>
       body {
@@ -76,15 +75,53 @@
       .button:hover {
         background-color: #0056b3;
       }
+
+      /* Subscription form styles */
+      .subscription-section {
+        background: rgba(0, 123, 255, 0.1);
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .subscription-section input[type="email"] {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+
+      .subscription-section button {
+        padding: 10px 20px;
+        margin-left: 10px;
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .subscription-section button:hover {
+        background-color: #0056b3;
+      }
+
+      .subscription-message {
+        margin-top: 15px;
+        font-weight: bold;
+        color: green;
+        display: none;
+      }
     </style>
 </head>
-
-
 
 <body>
 
     <header>
-	<img src="logo.jpeg" alt="Easy Gate Maintenance LLC Logo" class="logo">
+        <img src="logo.jpeg" alt="Easy Gate Maintenance LLC Logo" class="logo">
         <h1>Easy Gate & Smart Home & Maintenance LLC</h1>
         <p>Your Trusted Partner in Home Automation Solutions</p>
     </header>
@@ -99,9 +136,6 @@
         <a class="button" href="wifi.html">WiFi Access Point Installation</a>
         <a class="button" href="smart-home-automation-system.html">Smart Home Automation Systems</a>
     </section>
-
-
-
 
     <section>
         <h2>Welcome to Easy Gate Maintenance LLC</h2>
@@ -142,66 +176,73 @@
             <strong>فإن <strong>Easy Gate Maintenance LLC</strong> هو شريكك الموثوق في الجودة والابتكار.</strong>
         </p>
     </section>
-	<section>
-  <h2 style="text-align: center; color: #007BFF;">Watch Our Work on TikTok</h2>
-
-  <!-- First Video -->
-  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@easy.gate.smart.h/video/7463018275136441617" 
-    data-video-id="7463018275136441617" 
-    style="max-width: 605px; min-width: 325px; margin: 20px auto;">
-    <section>Loading TikTok video...</section>
-  </blockquote>
-
-  <!-- Second Video -->
-  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@easy.gate.smart.h/video/7517363532669799700" 
-    data-video-id="7517363532669799700" 
-    style="max-width: 605px; min-width: 325px; margin: 20px auto;">
-    <section>Loading TikTok video...</section>
-  </blockquote>
-
-  <!-- Third Video -->
-  <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@easy.gate.smart.h/video/7422751134000975111" 
-    data-video-id="7422751134000975111" 
-    style="max-width: 605px; min-width: 325px; margin: 20px auto;">
-    <section>Loading TikTok video...</section>
-  </blockquote>
-
-  <script async src="https://www.tiktok.com/embed.js"></script>
-</section>
-
-
 
     <section style="display: flex; justify-content: space-between;">
-    <!-- English Section -->
-    <div style="width: 50%; direction: ltr;">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need a quote, feel free to reach out!</p>
-        <p>Email: info@easygate.com</p>
-        
-        <p><strong style="font-weight: bold; font-size: 20px;">If you have any questions or would like to schedule an installation,</strong></p>
-        <p>please contact us:</p>
-        <p><strong>Sales Manager: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
-        <p><strong>Support Team: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
-    </div>
+        <!-- English Section -->
+        <div style="width: 50%; direction: ltr;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need a quote, feel free to reach out!</p>
+            <p>Email: info@easygate.com</p>
+            
+            <p><strong style="font-weight: bold; font-size: 20px;">If you have any questions or would like to schedule an installation,</strong></p>
+            <p>please contact us:</p>
+            <p><strong>Sales Manager: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+            <p><strong>Support Team: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+        </div>
 
-    <!-- Arabic Section -->
-    <div style="width: 50%; direction: rtl; text-align: right;">
-        <h2><strong>اتصل بنا</h2>
-        <p>إذا كانت لديك أي أسئلة أو تحتاج إلى عرض سعر، فلا تتردد في التواصل معنا!</p>
-        <p>البريد الإلكتروني: info@easygate.com</p>
+        <!-- Arabic Section -->
+        <div style="width: 50%; direction: rtl; text-align: right;">
+            <h2><strong>اتصل بنا</strong></h2>
+            <p>إذا كانت لديك أي أسئلة أو تحتاج إلى عرض سعر، فلا تتردد في التواصل معنا!</p>
+            <p>البريد الإلكتروني: info@easygate.com</p>
 
-        <p><strong style="font-weight: bold; font-size: 20px;">إذا كانت لديك أي أسئلة أو ترغب في جدولة تركيب،</strong></p>
-        <p>يرجى الاتصال بنا:</p>
-        <p><strong>مدير المبيعات: <a href="https://wa.me/971-558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
-        <p><strong>فريق الدعم: <a href="https://wa.me/971-558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
-    </strong></div>
-</section>
+            <p><strong style="font-weight: bold; font-size: 20px;">إذا كانت لديك أي أسئلة أو ترغب في جدولة تركيب،</strong></p>
+            <p>يرجى الاتصال بنا:</p>
+            <p><strong>مدير المبيعات: <a href="https://wa.me/971-558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+            <p><strong>فريق الدعم: <a href="https://wa.me/971-558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+        </div>
+    </section>
 
+    <!-- Subscription Form Section -->
+    <section class="subscription-section">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates, offers, and news directly to your inbox.</p>
+        <form id="subscriptionForm">
+            <input type="email" id="emailInput" name="email" placeholder="Enter your email address" required />
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="subscriptionMessage" class="subscription-message"></div>
+    </section>
 
-<footer>
-    <p>&copy; 2024 Easy Gate Maintenance LLC</p>
+    <footer>
+        <p>&copy; 2024 Easy Gate Maintenance LLC</p>
     </footer>
 
-</body>
+    <script>
+      const form = document.getElementById('subscriptionForm');
+      const emailInput = document.getElementById('emailInput');
+      const messageDiv = document.getElementById('subscriptionMessage');
 
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const email = emailInput.value.trim();
+        if (!email) {
+          messageDiv.style.color = 'red';
+          messageDiv.textContent = 'Please enter a valid email address.';
+          messageDiv.style.display = 'block';
+          return;
+        }
+
+        // Simulate an API call to save subscription
+        // You will replace this part with your backend or mailing list provider integration
+        setTimeout(() => {
+          messageDiv.style.color = 'green';
+          messageDiv.textContent = `Thank you for subscribing with ${email}!`;
+          messageDiv.style.display = 'block';
+          form.reset();
+        }, 1000);
+      });
+    </script>
+</body>
 </html>
