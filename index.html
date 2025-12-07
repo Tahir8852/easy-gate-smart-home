@@ -1,137 +1,82 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
-<script>
-    
-        {
-            client_key: "s7624exkyj31mk986f7gebdm",
-            // Optional: Add other initialization options, see documentation
-        }
-    ]);
-</script>    
-    <!-- Google Site Verification -->
-    <meta name="google-site-verification" content="uus3vhZm2_wisoeRu-7Gr1gkEFlIVZOG7wIdSwRhZeQ" />
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Easy Gate Maintenance LLC provides professional installation of CCTV, WiFi access points, Life and Nice brand sliding and swing gate machines, barrier machines, sound systems, intercom, access control, and Zigbee-based smart home automation systems in UAE." />
-    <meta name="keywords" content="CCTV installation, WiFi access point installation, Life gate machines, Nice gate machines, sliding gate, swing gate, barrier machines, sound system installation, intercom systems, access control, smart home automation, Zigbee systems, UAE" />
-    <meta name="author" content="Easy Gate Maintenance LLC" />
-
-    <title>Easy Gate Maintenance LLC - Home Automation & Security Solutions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Gate Maintenance LLC</title>
 
     <!-- Link to Google Fonts for Merriweather -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
     <style>
-      body {
-        font-family: 'Merriweather', serif;
-        margin: 0;
-        padding: 0;
-        background: url('background-image.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        color: #333;
-      }
+        body {
+            font-family: impect, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('image/background-image.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
 
-      header {
-        background: rgba(0, 123, 255, 0.8);
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-      }
-      .logo {
-        max-width: 150px;
-        height: auto;
-        margin-right: 20px;
-      }
+        header {
+            background: rgba(0, 123, 255, 0.8); /* Slightly transparent background */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+		.logo {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
 
-      section {
-        color: black;
-        padding: 20px;
-        margin: 20px;
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 8px;
-      }
+        section {
+            color: black;
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+        }
 
-      footer {
-        text-align: center;
-        padding: 10px 0;
-        margin: 40px;
-        background: rgba(0, 123, 255, 0.9);
-        color: white;
-      }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            margin: 40px;
+            background: rgba(0, 123, 255, 0.9);
+            color: white;
+            position: cover; center
+            bottom: 0;
+            width: 100%;
+        }
 
-      h2 {
-        color: #007BFF;
-      }
+        h2 {
+            color: #007BFF;
+        }
 
-      .button {
-        background-color: #007BFF;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        margin: 5px;
-        display: inline-block;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
 
-      .button:hover {
-        background-color: #0056b3;
-      }
-
-      /* Subscription form styles */
-      .subscription-section {
-        background: rgba(0, 123, 255, 0.1);
-        padding: 20px;
-        margin: 20px;
-        border-radius: 8px;
-        text-align: center;
-      }
-
-      .subscription-section input[type="email"] {
-        padding: 10px;
-        width: 250px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 16px;
-      }
-
-      .subscription-section button {
-        padding: 10px 20px;
-        margin-left: 10px;
-        background-color: #007BFF;
-        border: none;
-        color: white;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .subscription-section button:hover {
-        background-color: #0056b3;
-      }
-
-      .subscription-message {
-        margin-top: 15px;
-        font-weight: bold;
-        color: green;
-        display: none;
-      }
-  
-</script>
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
-        <img src="logo.jpeg" alt="Easy Gate Maintenance LLC Logo" class="logo">
+	<img src="image/logo.jpeg" alt="Easy Gate Maintenance LLC Logo" class="logo">
         <h1>Easy Gate & Smart Home & Maintenance LLC</h1>
         <p>Your Trusted Partner in Home Automation Solutions</p>
     </header>
@@ -188,73 +133,36 @@
     </section>
 
     <section style="display: flex; justify-content: space-between;">
-        <!-- English Section -->
-        <div style="width: 50%; direction: ltr;">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or need a quote, feel free to reach out!</p>
-            <p>Email: info@easygate.com</p>
-            
-            <p><strong style="font-weight: bold; font-size: 20px;">If you have any questions or would like to schedule an installation,</strong></p>
-            <p>please contact us:</p>
-            <p><strong>Sales Manager: <a href="https://wa.me/971544010067" style="text-decoration: none;">+971-544010067</a></strong></p>
-            <p><strong>Support Team: <a href="https://wa.me/971544010067" style="text-decoration: none;">+971-544010067</a></strong></p>
-        </div>
+    <!-- English Section -->
+    <div style="width: 50%; direction: ltr;">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need a quote, feel free to reach out!</p>
+        <p>Email: info@easygate.com</p>
+        
+        <p><strong style="font-weight: bold; font-size: 20px;">If you have any questions or would like to schedule an installation,</strong></p>
+        <p>please contact us:</p>
+        <p><strong>Sales Manager: <a href="https://wa.me/971564636930" style="text-decoration: none;">+971-564636930</a></strong></p>
+        <p><strong>Support Team: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+    </div>
 
-        <!-- Arabic Section -->
-        <div style="width: 50%; direction: rtl; text-align: right;">
-            <h2><strong>اتصل بنا</strong></h2>
-            <p>إذا كانت لديك أي أسئلة أو تحتاج إلى عرض سعر، فلا تتردد في التواصل معنا!</p>
-            <p>البريد الإلكتروني: info@easygate.com</p>
+    <!-- Arabic Section -->
+    <div style="width: 50%; direction: rtl; text-align: right;">
+        <h2><strong>اتصل بنا</h2>
+        <p>إذا كانت لديك أي أسئلة أو تحتاج إلى عرض سعر، فلا تتردد في التواصل معنا!</p>
+        <p>البريد الإلكتروني: info@easygate.com</p>
 
-            <p><strong style="font-weight: bold; font-size: 20px;">إذا كانت لديك أي أسئلة أو ترغب في جدولة تركيب،</strong></p>
-            <p>يرجى الاتصال بنا:</p>
-            <p><strong>مدير المبيعات: <a href="https://wa.me/971-544010067" style="text-decoration: none;">+971-544010067</a></strong></p>
-            <p><strong>فريق الدعم: <a href="https://wa.me/971-544010067" style="text-decoration: none;">+971-544010067</a></strong></p>
-        </div>
-    </section>
+        <p><strong style="font-weight: bold; font-size: 20px;">إذا كانت لديك أي أسئلة أو ترغب في جدولة تركيب،</strong></p>
+        <p>يرجى الاتصال بنا:</p>
+        <p><strong>مدير المبيعات: <a href="https://wa.me/971564636930" style="text-decoration: none;">+971-564636930</a></strong></p>
+        <p><strong>فريق الدعم: <a href="https://wa.me/971558204507" style="text-decoration: none;">+971-558204507</a></strong></p>
+    </strong></div>
+</section>
 
-    <!-- Subscription Form Section -->
-    <section class="subscription-section">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Get the latest updates, offers, and news directly to your inbox.</p>
-        <form id="subscriptionForm">
-            <input type="email" id="emailInput" name="email" placeholder="Enter your email address" required/>
-            <button type="submit">Subscribe</button>
-        </form>
-        <div id="subscriptionMessage" class="subscription-message"></div>
-    </section>
 
-    <footer>
-        <p>&copy; 2024 Easy Gate Maintenance LLC</p>
+<footer>
+    <p>&copy; 2024 Easy Gate Maintenance LLC</p>
     </footer>
 
-    <script>
-      const form = document.getElementById('subscriptionForm');
-      const emailInput = document.getElementById('emailInput');
-      const messageDiv = document.getElementById('subscriptionMessage');
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const email = emailInput.value.trim();
-        if (!email) {
-          messageDiv.style.color = 'red';
-          messageDiv.textContent = 'Please enter a valid email address.';
-          messageDiv.style.display = 'block';
-          return;
-        }
-
-        // Simulate an API call to save subscription
-        // You will replace this part with your backend or mailing list provider integration
-        setTimeout(() => {
-          messageDiv.style.color = 'green';
-          messageDiv.textContent = `Thank you for subscribing with ${email}!`;
-          messageDiv.style.display = 'block';
-          form.reset();
-        }, 1000);
-      });
-    </script>
 </body>
+
 </html>
-
-
